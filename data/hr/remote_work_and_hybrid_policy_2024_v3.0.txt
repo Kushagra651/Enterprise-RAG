@@ -1,0 +1,222 @@
+Below is **Document 1**.
+(As requested: **one at a time + filename first**.)
+
+---
+
+**remote_work_and_hybrid_policy_2024_v3.0.txt**
+
+---
+
+Title: Remote Work and Hybrid Policy 2024
+Type: Policy
+Department: HR
+Effective Date: January 8, 2024
+Version: v3.0
+-------------
+
+## 1. Purpose
+
+This policy outlines the company's guidelines for remote work and hybrid work arrangements. The goal is to provide employees with flexibility while maintaining productivity, collaboration, and organizational effectiveness.
+
+This policy applies to all full-time and part-time employees unless their job role requires a fully on-site presence.
+
+---
+
+## 2. Work Model Overview
+
+The company follows a **hybrid-first work model** designed to balance flexibility with in-person collaboration.
+
+Employees may choose one of the following work arrangements based on team requirements and manager approval:
+
+**Hybrid Work**
+
+Employees work:
+
+* **2–3 days per week in the office**
+* **2–3 days per week remotely**
+
+Typical hybrid schedule example:
+
+```
+Monday – Office  
+Tuesday – Remote  
+Wednesday – Office  
+Thursday – Remote  
+Friday – Remote
+```
+
+**Fully Remote**
+
+Certain roles may be designated as fully remote depending on the team’s operational requirements.
+
+Remote employees must still be available during core working hours.
+
+---
+
+## 3. Core Working Hours
+
+All employees must be available during company core collaboration hours:
+
+```
+10:00 AM – 4:00 PM (local time)
+```
+
+Outside of core hours, employees may choose flexible working schedules as long as work responsibilities are met.
+
+Managers may establish additional team-specific hours if required.
+
+---
+
+## 4. Eligibility
+
+Remote and hybrid work eligibility depends on:
+
+* Job role
+* Team collaboration needs
+* Performance history
+* Manager approval
+
+Roles that require physical presence (e.g., hardware operations, office support) may not qualify for full remote work.
+
+Employees must maintain satisfactory performance to continue remote eligibility.
+
+---
+
+## 5. Remote Work Expectations
+
+Employees working remotely must meet the following expectations:
+
+* Maintain a reliable internet connection
+* Be reachable through company communication tools (Slack, email, Zoom)
+* Attend scheduled meetings
+* Meet deadlines and performance expectations
+
+Employees should maintain a **professional and distraction-free work environment**.
+
+---
+
+## 6. Equipment and Workspace
+
+The company supports remote work by providing necessary equipment.
+
+Standard remote work equipment includes:
+
+* Company-issued laptop
+* External monitor (optional)
+* Keyboard and mouse
+* VPN access
+* Collaboration software tools
+
+Employees may also receive a **$500 remote workspace setup stipend** when starting remote work.
+
+This stipend may be used for:
+
+* Office chairs
+* Desk setup
+* Lighting
+* Ergonomic accessories
+
+Equipment provided by the company remains company property.
+
+---
+
+## 7. Communication Requirements
+
+Remote employees must remain actively engaged with their teams.
+
+Expected communication practices:
+
+* Daily updates in team Slack channels
+* Participation in scheduled meetings
+* Timely responses to messages (within reasonable working hours)
+
+Recommended response expectations:
+
+```
+Slack messages: within 2 hours
+Email: within 24 hours
+```
+
+Teams may also conduct **weekly check-ins** to ensure alignment and progress.
+
+---
+
+## 8. Office Usage
+
+Employees working in a hybrid model may use company offices as needed.
+
+Office resources include:
+
+* Meeting rooms
+* Collaboration spaces
+* Quiet work areas
+* High-speed internet
+* IT support
+
+Employees may reserve desks or meeting rooms using the office booking system.
+
+---
+
+## 9. Travel to Office
+
+Employees living within **50 km of the office** may be expected to attend certain in-person meetings or team collaboration days.
+
+Employees working remotely outside commuting distance may be required to travel for:
+
+* Quarterly team meetings
+* Company-wide events
+* Strategic planning sessions
+
+Travel expenses for these events will be covered according to the **Expense Reimbursement Policy**.
+
+---
+
+## 10. Security and Data Protection
+
+Remote work must comply with company data security policies.
+
+Employees must:
+
+* Use company-issued devices
+* Access company systems through VPN
+* Avoid using public Wi-Fi without secure connections
+* Lock screens when away from devices
+
+Sensitive company data must never be stored on personal devices.
+
+---
+
+## 11. Performance Monitoring
+
+Remote employees are evaluated based on:
+
+* Work quality
+* Meeting deadlines
+* Collaboration
+* Contribution to team goals
+
+The company does **not track employee activity through surveillance tools**. Performance evaluation is based on outcomes and results.
+
+---
+
+## 12. Policy Violations
+
+Failure to meet remote work expectations may result in:
+
+* Adjustment of remote work privileges
+* Requirement to work from office
+* Performance review discussions
+
+Managers may review remote work arrangements periodically.
+
+---
+
+## 13. Policy Review
+
+This policy will be reviewed annually by HR and leadership to ensure it continues to meet the needs of the company and employees.
+
+Updates will be communicated through the internal HR portal and company announcements.
+
+---
+
+Say **“Next”** and I’ll generate **Document 2: Leave and PTO Guidelines**.

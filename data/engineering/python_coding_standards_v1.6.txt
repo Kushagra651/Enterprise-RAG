@@ -1,0 +1,356 @@
+**python_coding_standards_v1.6.txt**
+
+---
+
+Title: Python Coding Standards
+Type: Guide
+Department: Engineering
+Date: January 9, 2024
+Version: v1.6
+-------------
+
+## 1. Purpose
+
+This document defines the Python coding standards used across engineering teams. These guidelines ensure consistent code style, maintainability, readability, and reliability across all Python services and scripts developed within the organization.
+
+All Python projects, including backend services, automation scripts, and data processing pipelines, must adhere to these standards.
+
+---
+
+## 2. Code Style and Formatting
+
+All Python code must follow **PEP 8 style guidelines** with additional company-specific conventions.
+
+### Line Length
+
+Maximum line length:
+
+```
+100 characters
+```
+
+Example:
+
+Bad:
+
+```python
+user_data = get_user_profile_from_database_using_long_function_name(user_id)
+```
+
+Good:
+
+```python
+user_data = get_user_profile_from_database(
+    user_id
+)
+```
+
+---
+
+### Indentation
+
+Use **4 spaces per indentation level**.
+
+Do not use tabs.
+
+Correct:
+
+```python
+def calculate_total(items):
+    total = 0
+    for item in items:
+        total += item.price
+    return total
+```
+
+---
+
+## 3. Naming Conventions
+
+Use descriptive and consistent naming patterns.
+
+| Element   | Naming Style |
+| --------- | ------------ |
+| Variables | snake_case   |
+| Functions | snake_case   |
+| Classes   | PascalCase   |
+| Constants | UPPER_CASE   |
+
+Examples:
+
+```python
+class PaymentProcessor:
+    MAX_RETRIES = 3
+
+    def process_payment(self, order_id):
+        pass
+```
+
+Avoid unclear variable names such as:
+
+```python
+x = 10
+data1 = []
+```
+
+Prefer:
+
+```python
+retry_count = 10
+user_orders = []
+```
+
+---
+
+## 4. Imports Organization
+
+Imports must be grouped in the following order:
+
+1. Standard library imports
+2. Third-party libraries
+3. Local project modules
+
+Example:
+
+```python
+import os
+import logging
+
+import requests
+import pandas as pd
+
+from services.payment_service import PaymentService
+```
+
+Separate each group with a blank line.
+
+---
+
+## 5. Function Design
+
+Functions should follow these principles:
+
+* Single responsibility
+* Short and readable
+* Clearly defined input and output
+
+Recommended maximum length:
+
+```
+40 lines
+```
+
+Example good function:
+
+```python
+def calculate_discount(price, discount_rate):
+    if discount_rate < 0 or discount_rate > 1:
+        raise ValueError("Invalid discount rate")
+
+    return price * (1 - discount_rate)
+```
+
+Avoid large functions performing multiple tasks.
+
+---
+
+## 6. Error Handling
+
+Use explicit exception handling where appropriate.
+
+Example:
+
+```python
+try:
+    response = requests.get(api_url)
+    response.raise_for_status()
+except requests.exceptions.RequestException as error:
+    logger.error("API request failed: %s", error)
+```
+
+Avoid bare exceptions:
+
+Bad:
+
+```python
+try:
+    process_data()
+except:
+    pass
+```
+
+Good:
+
+```python
+except ValueError as error:
+    logger.error(error)
+```
+
+---
+
+## 7. Logging Standards
+
+Use the **logging module** instead of print statements.
+
+Initialize logging as follows:
+
+```python
+import logging
+
+logger = logging.getLogger(__name__)
+```
+
+Example usage:
+
+```python
+logger.info("User login successful")
+logger.warning("Invalid login attempt")
+logger.error("Payment processing failed")
+```
+
+Log levels:
+
+| Level    | Usage                             |
+| -------- | --------------------------------- |
+| DEBUG    | Development debugging             |
+| INFO     | Normal operations                 |
+| WARNING  | Unexpected but recoverable events |
+| ERROR    | Failed operations                 |
+| CRITICAL | System-level failures             |
+
+---
+
+## 8. Docstrings and Documentation
+
+All public functions and classes must include **docstrings**.
+
+Use the following format:
+
+```python
+def create_user(email, password):
+    """
+    Create a new user account.
+
+    Args:
+        email (str): User email address
+        password (str): User password
+
+    Returns:
+        dict: Created user object
+    """
+```
+
+Docstrings help improve code readability and enable automated documentation generation.
+
+---
+
+## 9. Type Hints
+
+All new Python code must include **type hints**.
+
+Example:
+
+```python
+def get_user(user_id: int) -> dict:
+    return database.fetch_user(user_id)
+```
+
+Benefits of type hints:
+
+* Better IDE support
+* Easier debugging
+* Improved maintainability
+
+---
+
+## 10. Testing Requirements
+
+All Python modules must include automated tests.
+
+Recommended frameworks:
+
+* **pytest**
+* **unittest**
+
+Example test:
+
+```python
+def test_calculate_discount():
+    result = calculate_discount(100, 0.2)
+    assert result == 80
+```
+
+Run tests using:
+
+```bash
+pytest tests/
+```
+
+Minimum coverage requirement:
+
+```
+80%
+```
+
+---
+
+## 11. Dependency Management
+
+All dependencies must be declared in the project dependency file.
+
+Example using **requirements.txt**:
+
+```
+flask==2.3.0
+requests==2.31.0
+pandas==2.0.3
+```
+
+Install dependencies using:
+
+```bash
+pip install -r requirements.txt
+```
+
+Dependencies should be reviewed periodically for security vulnerabilities.
+
+---
+
+## 12. Code Formatting Tools
+
+All Python repositories must use automated formatting tools.
+
+Recommended tools:
+
+| Tool   | Purpose        |
+| ------ | -------------- |
+| Black  | Code formatter |
+| Flake8 | Linting        |
+| isort  | Import sorting |
+
+Example commands:
+
+```bash
+black .
+flake8 .
+isort .
+```
+
+These tools should be integrated into the CI pipeline.
+
+---
+
+## 13. Summary
+
+Following these Python coding standards ensures:
+
+* Consistent code style across teams
+* Improved readability and maintainability
+* Reduced bugs and technical debt
+* Easier collaboration between engineers
+
+All Python-based projects must follow these standards unless an exception is approved by the Engineering Lead.
+
+---
+
+Say **“Next”** to generate **Document 6: Incident Response and On-Call Procedures (SOP)**.

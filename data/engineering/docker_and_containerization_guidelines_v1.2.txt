@@ -1,0 +1,317 @@
+**docker_and_containerization_guidelines_v1.2.txt**
+
+---
+
+Title: Docker and Containerization Guidelines
+Type: Guide
+Department: Engineering
+Date: October 21, 2023
+Version: v1.2
+-------------
+
+## 1. Purpose
+
+This document provides guidelines for building, managing, and deploying Docker containers used across the organization. Containerization ensures consistent environments, reproducible builds, and simplified deployment across development, staging, and production systems.
+
+All backend services and microservices must be containerized using **Docker** unless explicitly exempted by the Platform Engineering team.
+
+---
+
+## 2. Why We Use Containers
+
+Containers provide several advantages:
+
+* Consistent runtime environments
+* Faster deployments
+* Simplified dependency management
+* Easier scaling and orchestration
+* Isolation between services
+
+Each application should run as an **independent container** with its own dependencies.
+
+---
+
+## 3. Dockerfile Best Practices
+
+A Dockerfile defines how a container image is built.
+
+A basic Dockerfile structure:
+
+```dockerfile id="c3q3vl"
+FROM python:3.10-slim
+
+WORKDIR /app
+
+COPY requirements.txt .
+
+RUN pip install --no-cache-dir -r requirements.txt
+
+COPY . .
+
+CMD ["python", "app.py"]
+```
+
+Key guidelines:
+
+* Use minimal base images
+* Avoid unnecessary layers
+* Keep images small
+* Use explicit version tags
+
+---
+
+## 4. Base Image Selection
+
+Always use official or internally approved base images.
+
+Preferred examples:
+
+```id="pmspyn"
+python:3.10-slim
+node:18-alpine
+nginx:1.24
+```
+
+Avoid using:
+
+```id="hrlnbo"
+latest
+```
+
+Example of good usage:
+
+```dockerfile id="5qch5q"
+FROM node:18-alpine
+```
+
+Pinning versions prevents unexpected breaking changes.
+
+---
+
+## 5. Image Layer Optimization
+
+Docker builds images in layers. Efficient layer management reduces build time and image size.
+
+Combine commands where possible.
+
+Bad example:
+
+```dockerfile id="ksd5hi"
+RUN apt-get update
+RUN apt-get install -y curl
+```
+
+Better example:
+
+```dockerfile id="fr5ow9"
+RUN apt-get update && apt-get install -y curl
+```
+
+Also remove unnecessary files:
+
+```dockerfile id="5zexr8"
+RUN apt-get clean && rm -rf /var/lib/apt/lists/*
+```
+
+---
+
+## 6. Multi-Stage Builds
+
+Multi-stage builds reduce final image size by separating build and runtime stages.
+
+Example:
+
+```dockerfile id="0sf39n"
+FROM node:18-alpine AS build
+
+WORKDIR /app
+COPY . .
+RUN npm install
+RUN npm run build
+
+FROM nginx:1.24
+
+COPY --from=build /app/dist /usr/share/nginx/html
+```
+
+Benefits:
+
+* Smaller images
+* Faster deployment
+* Reduced attack surface
+
+---
+
+## 7. Environment Variables
+
+Configuration should not be hardcoded in the image.
+
+Use environment variables instead.
+
+Example:
+
+```dockerfile id="us4lfk"
+ENV APP_ENV=production
+```
+
+Or pass variables at runtime:
+
+```bash id="51uf3k"
+docker run -e DATABASE_URL=postgres://db
+```
+
+Sensitive information such as passwords must be stored in **secrets management systems**, not in Dockerfiles.
+
+---
+
+## 8. Building Docker Images
+
+Build images using the following command:
+
+```bash id="otw5z9"
+docker build -t company-api:v1.0 .
+```
+
+Tag images using semantic versioning.
+
+Example:
+
+```id="5pwvjo"
+v1.0.0
+v1.1.0
+v2.0.0
+```
+
+Avoid using unversioned tags.
+
+---
+
+## 9. Running Containers
+
+Run containers locally for development using:
+
+```bash id="wrc9zo"
+docker run -p 8080:8080 company-api:v1.0
+```
+
+Options explained:
+
+| Option | Meaning              |
+| ------ | -------------------- |
+| -p     | Port mapping         |
+| -e     | Environment variable |
+| -d     | Detached mode        |
+
+Example detached run:
+
+```bash id="y3guk5"
+docker run -d -p 8080:8080 company-api:v1.0
+```
+
+---
+
+## 10. Docker Compose for Local Development
+
+For multi-service applications, use **Docker Compose**.
+
+Example `docker-compose.yml`:
+
+```yaml id="r7e16o"
+version: "3"
+
+services:
+  api:
+    build: .
+    ports:
+      - "8080:8080"
+
+  database:
+    image: postgres:14
+    environment:
+      POSTGRES_PASSWORD: example
+```
+
+Run services using:
+
+```bash id="ydyji9"
+docker-compose up
+```
+
+---
+
+## 11. Container Registry
+
+All production images must be stored in the company container registry.
+
+Example:
+
+```id="lqg8d8"
+registry.company.com/company-api:v1.0
+```
+
+Push images using:
+
+```bash id="6j7p1p"
+docker push registry.company.com/company-api:v1.0
+```
+
+Only images stored in the official registry may be deployed to production.
+
+---
+
+## 12. Security Best Practices
+
+Follow these container security guidelines:
+
+* Run containers as non-root user
+* Scan images for vulnerabilities
+* Use minimal base images
+* Remove unnecessary packages
+
+Example non-root user:
+
+```dockerfile id="jhg2nj"
+RUN adduser --disabled-password appuser
+USER appuser
+```
+
+Image scanning tools may include:
+
+* Trivy
+* Clair
+* Snyk
+
+---
+
+## 13. Logging and Monitoring
+
+Containers must output logs to **stdout/stderr** so that logging systems can capture them.
+
+Example:
+
+```python id="3ivpxy"
+print("Server started")
+```
+
+Logging systems then collect logs using tools such as:
+
+* Fluentd
+* ELK stack
+* Datadog
+
+---
+
+## 14. Summary
+
+Following Docker and containerization guidelines ensures:
+
+* Reliable builds
+* Consistent environments
+* Secure container images
+* Scalable infrastructure
+
+All engineering teams must adhere to these practices when building and deploying containerized applications.
+
+---
+
+Say **“Next”** to generate **Document 8: Database Migration Policy (Policy)**.

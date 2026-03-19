@@ -1,0 +1,284 @@
+**performance_review_process_v2.1.txt**
+
+---
+
+Title: Performance Review Process
+Type: Guide
+Department: HR
+Effective Date: September 12, 2023
+Version: v2.1
+-------------
+
+## 1. Purpose
+
+The Performance Review Process is designed to evaluate employee contributions, provide constructive feedback, and support professional growth within the organization. The goal of the review process is to ensure alignment between employee performance, team goals, and company objectives.
+
+Performance reviews help employees understand expectations, recognize achievements, and identify areas for improvement.
+
+---
+
+## 2. Review Cycle
+
+The company follows a **biannual performance review cycle**.
+
+Review periods occur twice per year:
+
+```id="xv6s21"
+January – June  
+July – December
+```
+
+Formal reviews are conducted in:
+
+```id="u0w1r3"
+July and January
+```
+
+Each review cycle includes goal evaluation, feedback discussions, and performance ratings.
+
+---
+
+## 3. Components of Performance Reviews
+
+The performance review process consists of the following components:
+
+### 1. Self-Assessment
+
+Employees complete a self-assessment reflecting on their work during the review period.
+
+Self-assessments should include:
+
+* Key accomplishments
+* Challenges faced
+* Contributions to team projects
+* Areas for improvement
+* Professional goals
+
+Example self-assessment statement:
+
+```id="t1k9v4"
+Led the backend optimization project that reduced API response time by 35%.
+```
+
+Self-assessments must be submitted through the HR portal before the review deadline.
+
+---
+
+### 2. Manager Evaluation
+
+Managers review employee performance based on several criteria.
+
+Evaluation factors include:
+
+* Quality of work
+* Technical expertise
+* Collaboration
+* Communication
+* Problem-solving
+* Ownership and initiative
+
+Managers should provide clear examples to support their evaluations.
+
+Example manager feedback:
+
+```id="p9w3x1"
+Consistently delivers high-quality code and proactively assists teammates with debugging issues.
+```
+
+---
+
+### 3. Peer Feedback
+
+Peer feedback provides additional insights into collaboration and teamwork.
+
+Employees may receive feedback from:
+
+* Team members
+* Project collaborators
+* Cross-functional partners
+
+Peer feedback focuses on:
+
+* Communication
+* Team contribution
+* Reliability
+* Knowledge sharing
+
+Peer feedback is anonymous and submitted through the performance review platform.
+
+---
+
+## 4. Performance Ratings
+
+Employees receive a performance rating at the end of each review cycle.
+
+Rating scale:
+
+| Rating | Description             |
+| ------ | ----------------------- |
+| 5      | Exceptional Performance |
+| 4      | Exceeds Expectations    |
+| 3      | Meets Expectations      |
+| 2      | Needs Improvement       |
+| 1      | Unsatisfactory          |
+
+A rating of **3 (Meets Expectations)** indicates solid performance and successful fulfillment of role responsibilities.
+
+Ratings of **4 or 5** indicate outstanding contributions and impact beyond standard expectations.
+
+---
+
+## 5. Goal Setting
+
+At the start of each review cycle, employees and managers collaboratively define performance goals.
+
+Goals should follow the **SMART framework**:
+
+* Specific
+* Measurable
+* Achievable
+* Relevant
+* Time-bound
+
+Example goal:
+
+```id="y7f5s8"
+Improve system reliability by reducing production incidents by 20% by the end of the review cycle.
+```
+
+Employees typically set **3–5 goals per review period**.
+
+---
+
+## 6. Performance Discussion Meeting
+
+After evaluations are completed, managers conduct a **one-on-one performance review meeting** with each employee.
+
+During the meeting, managers should discuss:
+
+* Overall performance
+* Achievements
+* Areas for improvement
+* Career development
+* Future goals
+
+Typical meeting duration:
+
+```id="e6z3b0"
+45–60 minutes
+```
+
+This meeting is an opportunity for open dialogue and feedback.
+
+---
+
+## 7. Development Plans
+
+If improvement areas are identified, a development plan may be created.
+
+Development plans may include:
+
+* Skill training
+* Mentorship opportunities
+* Project experience
+* Additional learning resources
+
+Example development plan:
+
+```id="m2u6g5"
+Improve system design skills by completing a distributed systems course and leading one architecture review.
+```
+
+Managers should support employees in achieving these development goals.
+
+---
+
+## 8. Promotions and Compensation
+
+Performance reviews may influence decisions related to:
+
+* Promotions
+* Salary adjustments
+* Bonuses
+* Expanded responsibilities
+
+However, compensation decisions are determined separately by leadership and HR based on company performance and budget considerations.
+
+Employees demonstrating consistent high performance may be considered for promotion during the annual review cycle.
+
+---
+
+## 9. Performance Improvement Plans (PIP)
+
+If an employee receives a **rating of 2 (Needs Improvement)** or below, a Performance Improvement Plan (PIP) may be implemented.
+
+A PIP typically lasts:
+
+```id="r5a1y2"
+30–60 days
+```
+
+The plan outlines:
+
+* Specific performance concerns
+* Improvement expectations
+* Milestones for progress
+
+Managers and HR will monitor progress during the PIP period.
+
+---
+
+## 10. Continuous Feedback
+
+Performance management is not limited to formal reviews.
+
+Managers are encouraged to provide **ongoing feedback throughout the year**.
+
+Recommended practices include:
+
+* Monthly one-on-one meetings
+* Project feedback sessions
+* Recognition of achievements
+
+Continuous feedback helps employees improve and stay aligned with team goals.
+
+---
+
+## 11. Documentation
+
+All performance reviews must be documented in the company HR system.
+
+Documents maintained include:
+
+* Self-assessment forms
+* Manager evaluations
+* Peer feedback summaries
+* Performance ratings
+* Development plans
+
+Employees may access their review history through the HR portal.
+
+---
+
+## 12. Confidentiality
+
+Performance reviews are confidential and should only be shared with:
+
+* The employee
+* The manager
+* HR
+* Authorized leadership
+
+Confidentiality ensures open and honest feedback during the review process.
+
+---
+
+## 13. Policy Updates
+
+The performance review process may be updated periodically based on company growth, feedback, and evolving organizational needs.
+
+Employees will be notified of any changes through official HR communication channels.
+
+---
+
+Say **“Next”** to generate **Document 4: New Employee Onboarding Checklist**.

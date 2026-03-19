@@ -1,0 +1,312 @@
+**production_deployment_process_v2.2.txt**
+
+---
+
+Title: Production Deployment Process
+Type: SOP
+Department: Engineering
+Date: November 18, 2023
+Version: v2.2
+-------------
+
+## 1. Purpose
+
+This document outlines the standard process for deploying applications and services to the production environment. The goal is to ensure safe, reliable, and repeatable deployments while minimizing downtime and service disruptions.
+
+All engineering teams must follow this deployment process when releasing updates to production systems.
+
+---
+
+## 2. Deployment Principles
+
+Production deployments must follow these principles:
+
+* **Automated deployments through CI/CD**
+* **No direct manual changes in production servers**
+* **Rollback capability must always exist**
+* **Deployments must be observable and monitored**
+
+All deployments must be triggered through the company’s CI/CD platform (e.g., GitHub Actions, Jenkins, or GitLab CI).
+
+---
+
+## 3. Pre-Deployment Checklist
+
+Before initiating a production deployment, the following checks must be completed.
+
+### Code Readiness
+
+Verify that:
+
+* Code has passed all CI checks
+* Pull request has been approved
+* Branch is merged into `main`
+* Release version is tagged
+
+Example tagging command:
+
+```bash
+git tag v2.4.0
+git push origin v2.4.0
+```
+
+---
+
+### Testing Requirements
+
+Ensure the following tests have passed:
+
+* Unit tests
+* Integration tests
+* API tests
+* Security scans
+
+Example CI test command:
+
+```bash
+npm run test
+```
+
+Minimum required test coverage:
+
+```
+80%
+```
+
+---
+
+### Database Migration Review
+
+If the release includes database migrations:
+
+* Migration scripts must be reviewed
+* Migration must be backward compatible
+* Rollback plan must exist
+
+Example migration command:
+
+```bash
+python manage.py migrate
+```
+
+---
+
+## 4. Deployment Workflow
+
+Production deployments follow a standardized pipeline.
+
+### Step 1: Build
+
+The CI system builds the application artifact.
+
+Example Docker build:
+
+```bash
+docker build -t company-api:v2.4.0 .
+```
+
+The artifact must be immutable and versioned.
+
+---
+
+### Step 2: Push Artifact to Registry
+
+The container image is pushed to the container registry.
+
+Example:
+
+```bash
+docker tag company-api:v2.4.0 registry.company.com/company-api:v2.4.0
+docker push registry.company.com/company-api:v2.4.0
+```
+
+This ensures the deployment uses a reproducible artifact.
+
+---
+
+### Step 3: Deploy to Staging
+
+All releases must first be deployed to the **staging environment**.
+
+Example Kubernetes deployment:
+
+```bash
+kubectl apply -f k8s/staging-deployment.yaml
+```
+
+Engineers must verify:
+
+* Application starts successfully
+* Logs show no errors
+* Health checks pass
+
+---
+
+### Step 4: QA Validation
+
+QA or the responsible engineer must verify:
+
+* API endpoints function correctly
+* UI features work as expected
+* Database queries succeed
+* Performance metrics remain stable
+
+Example health check:
+
+```bash
+curl https://staging.api.company.com/health
+```
+
+Expected response:
+
+```json
+{
+  "status": "ok"
+}
+```
+
+---
+
+### Step 5: Production Deployment
+
+Once staging validation is complete, the release can be deployed to production.
+
+Example command:
+
+```bash
+kubectl apply -f k8s/production-deployment.yaml
+```
+
+Deployment strategy typically used:
+
+**Rolling Deployment**
+
+This ensures new instances replace old ones gradually without downtime.
+
+---
+
+## 5. Monitoring After Deployment
+
+After deployment, engineers must monitor the system for at least **30 minutes**.
+
+Key metrics to observe:
+
+* Error rate
+* Response latency
+* CPU usage
+* Memory consumption
+* Request throughput
+
+Example monitoring tools:
+
+* Prometheus
+* Grafana
+* Datadog
+
+Example query:
+
+```
+error_rate > 2%
+```
+
+If error rates increase significantly, rollback should be considered immediately.
+
+---
+
+## 6. Rollback Procedure
+
+If a deployment introduces critical issues, rollback must be executed.
+
+Example Kubernetes rollback:
+
+```bash
+kubectl rollout undo deployment/company-api
+```
+
+Alternative rollback using previous image:
+
+```bash
+kubectl set image deployment/company-api api=registry.company.com/company-api:v2.3.5
+```
+
+After rollback, confirm system stability using monitoring dashboards.
+
+---
+
+## 7. Deployment Window
+
+To minimize user impact, production deployments should occur during approved deployment windows.
+
+Recommended window:
+
+```
+Tuesday – Thursday
+10:00 AM – 3:00 PM UTC
+```
+
+Avoid deployments during:
+
+* Peak traffic hours
+* Major product launches
+* Critical business events
+
+Emergency deployments must be approved by the Engineering Manager.
+
+---
+
+## 8. Communication During Deployment
+
+For major releases, engineers must notify relevant teams.
+
+Required communication channels:
+
+* Engineering Slack channel
+* DevOps notification channel
+* Incident response channel (if required)
+
+Example deployment message:
+
+```
+Production deployment starting for company-api v2.4.0.
+Estimated completion: 15 minutes.
+```
+
+Once deployment is completed:
+
+```
+Deployment successful. Monitoring system health.
+```
+
+---
+
+## 9. Post-Deployment Tasks
+
+After successful deployment:
+
+* Verify monitoring dashboards
+* Confirm alerts are not triggered
+* Update release notes
+* Close related tickets
+
+Release notes should include:
+
+* New features
+* Bug fixes
+* Infrastructure changes
+
+---
+
+## 10. Summary
+
+Following this production deployment SOP ensures:
+
+* Reliable releases
+* Reduced downtime
+* Quick recovery from failures
+* Consistent deployment practices
+
+All engineering teams must adhere to this process when deploying services to production.
+
+---
+
+Say **“Next”** to generate **Document 5: Python Coding Standards (Guide)**.

@@ -1,0 +1,253 @@
+**leave_and_pto_guidelines_v2.4.txt**
+
+---
+
+Title: Leave and PTO Guidelines
+Type: Policy
+Department: HR
+Effective Date: April 3, 2023
+Version: v2.4
+-------------
+
+## 1. Purpose
+
+This document defines the company's leave and Paid Time Off (PTO) policies. The goal is to ensure employees have adequate time for rest, personal responsibilities, illness, and family needs while maintaining operational continuity.
+
+This policy applies to all full-time employees. Certain provisions may differ for contractors and part-time employees.
+
+---
+
+## 2. Paid Time Off (PTO)
+
+All full-time employees are eligible for **15 days of Paid Time Off (PTO)** per calendar year.
+
+PTO may be used for:
+
+* Vacation
+* Personal time
+* Short personal emergencies
+* Personal appointments
+
+PTO accrual schedule:
+
+```id="m9zn14"
+1.25 days per month
+```
+
+Employees begin accruing PTO from their **date of joining**.
+
+Unused PTO may be carried forward to the next year up to a maximum of:
+
+```id="l48wby"
+10 days
+```
+
+Any unused PTO beyond this limit will expire at the end of the calendar year.
+
+---
+
+## 3. Public Holidays
+
+The company observes **10–12 public holidays annually** depending on regional location.
+
+Typical holidays include:
+
+* New Year's Day
+* Republic Day
+* Independence Day
+* Diwali
+* Christmas Day
+
+The official holiday calendar is published by HR at the beginning of each year.
+
+Employees are not required to use PTO for official company holidays.
+
+---
+
+## 4. Sick Leave
+
+Employees are entitled to **8 days of paid sick leave per year**.
+
+Sick leave may be used for:
+
+* Personal illness
+* Medical appointments
+* Recovery after medical procedures
+
+For sick leave longer than **2 consecutive days**, employees may be asked to provide a medical certificate.
+
+Unused sick leave **cannot be carried forward** to the next year.
+
+---
+
+## 5. Casual Leave
+
+Employees may take **5 days of casual leave annually** for short personal matters.
+
+Examples include:
+
+* Personal errands
+* Family responsibilities
+* Urgent personal needs
+
+Casual leave should ideally be requested **at least one day in advance**, unless it is an emergency.
+
+Casual leave cannot be carried forward to the next year.
+
+---
+
+## 6. Maternity Leave
+
+Eligible employees are entitled to **26 weeks of paid maternity leave**, in accordance with applicable labor regulations.
+
+Maternity leave may begin:
+
+* Up to **8 weeks before the expected delivery date**
+
+Employees must notify HR and their manager at least:
+
+```id="jw0v5j"
+8 weeks in advance
+```
+
+Supporting medical documentation may be required.
+
+---
+
+## 7. Paternity Leave
+
+Employees are entitled to **10 working days of paid paternity leave** following the birth or adoption of a child.
+
+Paternity leave must be used within:
+
+```id="v4n91b"
+90 days of the child’s birth or adoption
+```
+
+Employees should inform their manager and HR before taking this leave when possible.
+
+---
+
+## 8. Bereavement Leave
+
+Employees are eligible for **3 days of paid bereavement leave** in the event of the death of an immediate family member.
+
+Immediate family includes:
+
+* Parents
+* Spouse
+* Children
+* Siblings
+* Grandparents
+
+Additional leave may be approved by the manager depending on circumstances.
+
+---
+
+## 9. Unpaid Leave
+
+Employees may request unpaid leave if they have exhausted their available PTO.
+
+Unpaid leave may be approved for:
+
+* Extended personal travel
+* Family responsibilities
+* Medical recovery
+* Personal emergencies
+
+Approval depends on:
+
+* Business needs
+* Manager approval
+* HR approval
+
+---
+
+## 10. Leave Request Process
+
+Employees must request leave through the company HR system.
+
+Standard leave request timeline:
+
+| Leave Type     | Notice Required     |
+| -------------- | ------------------- |
+| PTO            | 3 days              |
+| Casual Leave   | 1 day               |
+| Sick Leave     | As soon as possible |
+| Extended Leave | 2 weeks             |
+
+Example leave request message:
+
+```id="yzqsn6"
+Subject: PTO Request (June 10–14)
+
+Hi [Manager Name],
+
+I would like to request PTO from June 10 to June 14 for personal travel.  
+All current tasks will be completed before the leave period.
+
+Thanks,
+[Employee Name]
+```
+
+Managers should approve or decline leave requests within **2 business days**.
+
+---
+
+## 11. Leave During Probation
+
+Employees during their probation period may take limited leave.
+
+Allowed leave during probation:
+
+```id="eyuvr7"
+Up to 5 days PTO
+```
+
+Any additional leave must be approved by both the manager and HR.
+
+---
+
+## 12. Team Coordination
+
+Employees are responsible for ensuring work continuity when taking leave.
+
+Employees should:
+
+* Inform teammates of absence
+* Update project status
+* Delegate urgent tasks if necessary
+* Set email auto-responses
+
+Example email auto-response:
+
+```id="x6e4r3"
+Thank you for your message. I am currently on leave and will return on July 5.  
+For urgent matters, please contact [teammate].
+```
+
+---
+
+## 13. Policy Compliance
+
+Misuse of leave policies may result in disciplinary action.
+
+Examples of misuse include:
+
+* Providing false reasons for leave
+* Failing to notify the manager
+* Repeated unapproved absences
+
+Managers and HR may review leave patterns to ensure fair usage.
+
+---
+
+## 14. Policy Updates
+
+HR will review this policy periodically and may update it to align with legal requirements and company needs.
+
+Any policy updates will be communicated through official HR announcements.
+
+---
+
+Say **“Next”** to generate **Document 3: Performance Review Process**.

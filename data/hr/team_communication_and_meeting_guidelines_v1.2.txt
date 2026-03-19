@@ -1,0 +1,240 @@
+**team_communication_and_meeting_guidelines_v1.2.txt**
+
+---
+
+Title: Team Communication and Meeting Guidelines
+Type: SOP
+Department: HR
+Effective Date: February 12, 2024
+Version: v1.2
+-------------
+
+## 1. Purpose
+
+This document outlines the company’s standard practices for internal communication and meetings. The goal is to ensure clear, efficient, and productive collaboration across teams while minimizing unnecessary meetings and communication overload.
+
+These guidelines apply to all employees and teams within the organization.
+
+---
+
+## 2. Communication Principles
+
+Effective communication within the company should follow these principles:
+
+* Clear and concise messaging
+* Respectful and professional interactions
+* Transparency in project updates
+* Timely responses to team members
+* Preference for asynchronous communication when possible
+
+Employees should choose the appropriate communication channel depending on urgency and complexity.
+
+---
+
+## 3. Communication Channels
+
+The company uses multiple communication tools for different purposes.
+
+| Tool                        | Purpose                                |
+| --------------------------- | -------------------------------------- |
+| Slack                       | Quick team communication               |
+| Email                       | Formal communication and announcements |
+| Zoom / Google Meet          | Meetings and video calls               |
+| Project Tools (Jira, Asana) | Task tracking and updates              |
+| Documentation Platforms     | Knowledge sharing                      |
+
+Employees should avoid mixing communication channels unnecessarily to reduce confusion.
+
+Example guideline:
+
+```id="i9f1jk"
+Project updates → Project management tool  
+Quick questions → Slack
+```
+
+---
+
+## 4. Response Time Expectations
+
+Employees are expected to respond to messages within reasonable timeframes during working hours.
+
+Recommended response times:
+
+```id="e3q8zm"
+Slack messages: within 2 hours  
+Email messages: within 24 hours
+```
+
+Urgent matters should be clearly marked or communicated directly through appropriate channels.
+
+Employees working in different time zones should communicate expected availability to their teams.
+
+---
+
+## 5. Meeting Guidelines
+
+Meetings should be scheduled only when necessary.
+
+Before scheduling a meeting, consider whether the discussion can be handled through:
+
+* Slack messages
+* Email threads
+* Project management comments
+* Shared documents
+
+Reducing unnecessary meetings helps employees maintain productivity.
+
+---
+
+## 6. Meeting Scheduling Best Practices
+
+When scheduling meetings, organizers should follow these guidelines:
+
+* Provide a clear meeting agenda
+* Invite only necessary participants
+* Respect time zones
+* Avoid scheduling during lunch hours when possible
+
+Recommended meeting duration:
+
+```id="k7r2cd"
+30 minutes standard  
+60 minutes maximum
+```
+
+Meetings longer than one hour should include a break.
+
+---
+
+## 7. Meeting Agenda Requirements
+
+Every scheduled meeting should include a brief agenda.
+
+Example meeting agenda:
+
+```id="h5t8nq"
+1. Project progress updates
+2. Discussion of blockers
+3. Planning next sprint tasks
+```
+
+Providing an agenda allows participants to prepare and contribute effectively.
+
+---
+
+## 8. Meeting Roles
+
+Effective meetings typically include the following roles:
+
+**Meeting Organizer**
+
+Responsible for scheduling the meeting and sharing the agenda.
+
+**Facilitator**
+
+Ensures the meeting stays focused and within the time limit.
+
+**Note Taker**
+
+Documents important decisions and action items.
+
+Meeting notes should be shared with participants after the meeting.
+
+---
+
+## 9. Standup Meetings
+
+Teams may conduct daily standup meetings to coordinate work.
+
+Typical standup format:
+
+Each team member answers three questions:
+
+```id="s4y6ap"
+What did I complete yesterday?  
+What will I work on today?  
+Are there any blockers?
+```
+
+Recommended duration:
+
+```id="c2j1op"
+10–15 minutes
+```
+
+Standups should remain brief and focused.
+
+---
+
+## 10. Remote Meeting Etiquette
+
+Employees participating in virtual meetings should follow professional etiquette.
+
+Recommended practices include:
+
+* Joining meetings on time
+* Muting microphone when not speaking
+* Using video when appropriate
+* Avoiding multitasking during discussions
+
+Employees should also test their audio and internet connection before joining important meetings.
+
+---
+
+## 11. Documentation of Decisions
+
+Important meeting outcomes should be documented and shared with relevant stakeholders.
+
+Meeting documentation may include:
+
+* Decisions made
+* Action items
+* Responsible individuals
+* Deadlines
+
+Example action item entry:
+
+```id="m6w0te"
+Action: Update API documentation  
+Owner: Engineering Team  
+Deadline: March 1
+```
+
+Documentation ensures accountability and prevents miscommunication.
+
+---
+
+## 12. Reducing Meeting Overload
+
+To maintain productivity, teams should limit recurring meetings where possible.
+
+Managers are encouraged to periodically review recurring meetings and evaluate whether they remain necessary.
+
+Strategies to reduce meeting overload include:
+
+* Combining related meetings
+* Replacing updates with written reports
+* Encouraging asynchronous collaboration
+
+---
+
+## 13. Continuous Improvement
+
+Teams are encouraged to continuously improve their communication practices.
+
+Employees may provide feedback on communication tools, meeting effectiveness, or collaboration processes through their managers or HR.
+
+---
+
+## 14. Summary
+
+Following these communication and meeting guidelines helps ensure:
+
+* Clear and effective collaboration
+* Reduced meeting fatigue
+* Better team productivity
+* Transparent project coordination
+
+All employees are expected to follow these guidelines to maintain a positive and efficient work environment.
+
+---

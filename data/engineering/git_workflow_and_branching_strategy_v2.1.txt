@@ -1,0 +1,283 @@
+Below is **Document 1**.
+I’ll wait for you to say **“Next”** before generating the next one, so each file stays clean and easy to save.
+
+---
+
+---
+
+Title: Git Workflow and Branching Strategy
+Type: SOP
+Department: Engineering
+Date: March 14, 2023
+Version: v2.1
+-------------
+
+### 1. Purpose
+
+This document defines the standardized Git workflow and branching strategy used across the engineering teams. The goal is to maintain a consistent development process, reduce integration conflicts, and ensure reliable deployments to staging and production environments.
+
+All repositories hosted under the company’s Git organization must follow this workflow unless explicitly approved otherwise by the Platform Engineering team.
+
+---
+
+### 2. Branching Model Overview
+
+We follow a **modified GitFlow model** with the following primary branches:
+
+* **main** – Production-ready code
+* **develop** – Integration branch for ongoing development
+* **feature/** – Individual feature branches
+* **release/** – Pre-production stabilization branches
+* **hotfix/** – Emergency fixes for production
+
+Branch protection rules are enabled for both `main` and `develop`.
+
+Direct commits to these branches are **not allowed**.
+
+---
+
+### 3. Feature Development Workflow
+
+All new development begins with a feature branch.
+
+#### Step 1: Sync with develop
+
+```bash
+git checkout develop
+git pull origin develop
+```
+
+#### Step 2: Create a feature branch
+
+Branch naming convention:
+
+```
+feature/<ticket-id>-short-description
+```
+
+Example:
+
+```
+feature/ENG-241-user-authentication
+```
+
+Create the branch:
+
+```bash
+git checkout -b feature/ENG-241-user-authentication
+```
+
+---
+
+#### Step 3: Commit changes
+
+Commits should be **small, atomic, and descriptive**.
+
+Example:
+
+```
+git commit -m "Add JWT authentication middleware"
+```
+
+Follow this commit message format:
+
+```
+<type>: <description>
+
+Example:
+feat: add password reset endpoint
+fix: resolve memory leak in worker service
+```
+
+Allowed types:
+
+* feat
+* fix
+* refactor
+* docs
+* test
+* chore
+
+---
+
+#### Step 4: Push branch to remote
+
+```bash
+git push origin feature/ENG-241-user-authentication
+```
+
+---
+
+#### Step 5: Create Pull Request
+
+Open a **Pull Request (PR)** from the feature branch to `develop`.
+
+PR must include:
+
+* Description of changes
+* Linked ticket
+* Testing steps
+* Screenshots if UI changes
+
+Example PR title:
+
+```
+ENG-241: Implement JWT authentication
+```
+
+---
+
+### 4. Code Review Requirements
+
+Before merging:
+
+* Minimum **2 approvals** required
+* CI pipeline must pass
+* No merge conflicts
+* All comments resolved
+
+Automated checks include:
+
+* Linting
+* Unit tests
+* Security scanning
+* Dependency checks
+
+Merge method used:
+
+**Squash and Merge**
+
+This keeps commit history clean.
+
+---
+
+### 5. Release Branch Workflow
+
+When preparing a release, create a release branch from `develop`.
+
+Example:
+
+```bash
+git checkout develop
+git checkout -b release/v2.3.0
+```
+
+Purpose of release branch:
+
+* Bug fixes
+* Documentation updates
+* Final QA validation
+
+No new features should be added.
+
+---
+
+### 6. Production Release Process
+
+Once QA validation is complete:
+
+1. Merge release branch into `main`
+2. Tag the release
+3. Merge back into `develop`
+
+Example:
+
+```bash
+git checkout main
+git merge release/v2.3.0
+git tag v2.3.0
+git push origin main --tags
+```
+
+Then sync back:
+
+```bash
+git checkout develop
+git merge release/v2.3.0
+```
+
+Finally delete the release branch:
+
+```bash
+git branch -d release/v2.3.0
+```
+
+---
+
+### 7. Hotfix Workflow
+
+Hotfix branches are used to address critical production issues.
+
+Create hotfix from `main`:
+
+```bash
+git checkout main
+git pull origin main
+git checkout -b hotfix/ENG-301-payment-failure
+```
+
+After fixing:
+
+1. PR into `main`
+2. Tag release
+3. Merge into `develop`
+
+Example:
+
+```bash
+git tag v2.3.1
+git push origin v2.3.1
+```
+
+---
+
+### 8. Branch Protection Rules
+
+Protected branches:
+
+* `main`
+* `develop`
+
+Enforced rules:
+
+* Pull requests required
+* Status checks required
+* No force pushes
+* No direct commits
+* Review approvals required
+
+---
+
+### 9. Additional Best Practices
+
+Engineers should:
+
+* Rebase feature branches regularly
+
+Example:
+
+```bash
+git fetch origin
+git rebase origin/develop
+```
+
+* Avoid large pull requests
+* Write meaningful commit messages
+* Ensure tests accompany new features
+
+---
+
+### 10. Summary
+
+This Git workflow ensures:
+
+* Clean version control history
+* Safe production releases
+* Efficient team collaboration
+* Reduced integration issues
+
+All engineering teams must follow this SOP to maintain consistent development practices across repositories.
+
+---
+
+Say **“Next”** and I’ll generate **Document 2: API Development Guidelines (700 words)**.

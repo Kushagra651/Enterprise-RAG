@@ -1,0 +1,354 @@
+**code_review_checklist_and_best_practices_v1.3.txt**
+
+---
+
+Title: Code Review Checklist and Best Practices
+Type: SOP
+Department: Engineering
+Date: September 5, 2023
+Version: v1.3
+-------------
+
+## 1. Purpose
+
+This document defines the standard code review process followed by engineering teams. Code reviews ensure high code quality, maintainability, security, and knowledge sharing across the organization.
+
+All code changes must go through a **Pull Request (PR) review process** before merging into protected branches such as `develop` or `main`.
+
+---
+
+## 2. When Code Reviews Are Required
+
+A code review is mandatory for:
+
+* New features
+* Bug fixes
+* Refactoring
+* Performance improvements
+* Infrastructure changes
+* Database migrations
+* Security updates
+
+The only exception is **emergency hotfixes**, which must still undergo review **after deployment**.
+
+---
+
+## 3. Pull Request Requirements
+
+Before requesting a review, the author must ensure the following:
+
+### Pull Request Description
+
+Each PR must include:
+
+* Clear description of the change
+* Related ticket or issue ID
+* Testing instructions
+* Screenshots (if UI related)
+
+Example PR description:
+
+```
+ENG-482: Implement password reset API
+
+Changes:
+- Added reset password endpoint
+- Implemented email verification token
+- Added unit tests
+
+Testing:
+1. Send POST request to /api/v1/reset-password
+2. Verify token email
+3. Reset password using token
+```
+
+---
+
+### Branch Naming Convention
+
+Feature branches must follow the format:
+
+```
+feature/<ticket-id>-short-description
+```
+
+Example:
+
+```
+feature/ENG-482-password-reset
+```
+
+---
+
+### CI Checks
+
+The following automated checks must pass before review:
+
+* Unit tests
+* Linting
+* Security scan
+* Dependency checks
+
+Example CI command:
+
+```bash
+npm run test
+npm run lint
+```
+
+---
+
+## 4. Reviewer Responsibilities
+
+Reviewers are responsible for ensuring the following areas meet company standards.
+
+### 4.1 Code Quality
+
+Check for:
+
+* Clean and readable code
+* Proper variable naming
+* Consistent formatting
+* Removal of unused code
+
+Example improvement:
+
+Bad:
+
+```
+int x;
+```
+
+Good:
+
+```
+int totalUserCount;
+```
+
+---
+
+### 4.2 Logic and Correctness
+
+Verify:
+
+* Business logic is correct
+* Edge cases are handled
+* Error handling exists
+
+Example check:
+
+```
+if user_id is null → return 400 error
+```
+
+Ensure the system does not fail silently.
+
+---
+
+### 4.3 Security Considerations
+
+Reviewers must check for common security risks.
+
+Important checks:
+
+* SQL injection vulnerabilities
+* Input validation
+* Authentication checks
+* Sensitive data exposure
+
+Example SQL injection risk:
+
+Bad:
+
+```python
+query = "SELECT * FROM users WHERE id=" + user_id
+```
+
+Good:
+
+```python
+query = "SELECT * FROM users WHERE id=%s"
+cursor.execute(query, (user_id,))
+```
+
+---
+
+### 4.4 Performance
+
+Review potential performance issues such as:
+
+* N+1 database queries
+* Inefficient loops
+* Large memory usage
+
+Example improvement:
+
+Bad:
+
+```
+Query database inside loop
+```
+
+Good:
+
+```
+Fetch data in batch query
+```
+
+---
+
+### 4.5 Test Coverage
+
+All new functionality must include tests.
+
+Required tests:
+
+* Unit tests
+* Edge case tests
+* Failure scenarios
+
+Example test command:
+
+```bash
+pytest tests/
+```
+
+Minimum recommended coverage:
+
+```
+80% coverage
+```
+
+---
+
+## 5. Review Process
+
+### Step 1: Author Creates Pull Request
+
+The author pushes the feature branch and opens a PR against `develop`.
+
+Example command:
+
+```bash
+git push origin feature/ENG-482-password-reset
+```
+
+---
+
+### Step 2: Assign Reviewers
+
+At least **two reviewers** must be assigned.
+
+Reviewers should include:
+
+* One engineer from the same team
+* One engineer from another team (recommended)
+
+---
+
+### Step 3: Reviewer Feedback
+
+Reviewers should provide:
+
+* Clear comments
+* Suggestions for improvement
+* Approval or requested changes
+
+Example comment:
+
+```
+Consider extracting this logic into a helper function for readability.
+```
+
+---
+
+### Step 4: Address Review Comments
+
+The PR author must resolve comments before merging.
+
+Example workflow:
+
+```
+Commit fixes → Push → Re-request review
+```
+
+---
+
+### Step 5: Approval and Merge
+
+Requirements for merge:
+
+* Minimum **2 approvals**
+* CI checks passing
+* No unresolved comments
+
+Merge strategy:
+
+```
+Squash and Merge
+```
+
+This keeps the commit history clean.
+
+---
+
+## 6. Code Review Best Practices
+
+### For Authors
+
+Keep PRs small and focused.
+
+Recommended:
+
+```
+< 400 lines of code
+```
+
+Large PRs slow down reviews and increase risk.
+
+---
+
+### For Reviewers
+
+* Review code promptly
+* Be constructive in feedback
+* Focus on important issues
+
+Avoid nitpicking minor formatting issues already handled by linters.
+
+---
+
+### Communication
+
+Use respectful and collaborative language.
+
+Example:
+
+Good:
+
+```
+Suggestion: this function could be simplified using a dictionary lookup.
+```
+
+Avoid:
+
+```
+This code is wrong.
+```
+
+---
+
+## 7. Summary
+
+The code review process helps ensure:
+
+* High code quality
+* Secure implementations
+* Maintainable codebases
+* Shared team knowledge
+
+All engineering teams must follow this SOP to maintain consistent development standards across projects.
+
+---
+
+Say **“Next”** for **Document 4: Production Deployment Process (SOP)**.

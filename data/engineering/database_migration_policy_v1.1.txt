@@ -1,0 +1,287 @@
+**database_migration_policy_v1.1.txt**
+
+---
+
+Title: Database Migration Policy
+Type: Policy
+Department: Engineering
+Date: May 22, 2023
+Version: v1.1
+-------------
+
+## 1. Purpose
+
+This policy defines the standards and procedures for performing database schema changes and data migrations within company systems. Proper migration practices help ensure database integrity, minimize service disruption, and allow safe rollbacks when issues occur.
+
+All engineering teams must follow this policy when introducing schema changes to production databases.
+
+---
+
+## 2. Definition of a Migration
+
+A database migration refers to any change made to the structure or contents of a database.
+
+Examples include:
+
+* Creating or modifying tables
+* Adding or removing columns
+* Changing indexes
+* Updating constraints
+* Data transformation or backfilling
+
+All migrations must be performed through **version-controlled migration scripts** rather than manual database edits.
+
+---
+
+## 3. Migration Tooling
+
+Each service must use an approved migration tool depending on the technology stack.
+
+Common tools include:
+
+| Technology      | Migration Tool      |
+| --------------- | ------------------- |
+| Python / Django | Django Migrations   |
+| Node.js         | Knex or Sequelize   |
+| Java            | Flyway or Liquibase |
+
+Example Django migration command:
+
+```bash id="vwrx4c"
+python manage.py makemigrations
+python manage.py migrate
+```
+
+Migration scripts must be committed to the repository and reviewed through the pull request process.
+
+---
+
+## 4. Migration Design Principles
+
+Database migrations should follow these key principles.
+
+### Backward Compatibility
+
+New schema changes must remain compatible with the previous application version during deployment.
+
+Example safe migration pattern:
+
+1. Add new column
+2. Deploy application using new column
+3. Remove old column later
+
+Example SQL:
+
+```sql id="kr0l3h"
+ALTER TABLE users ADD COLUMN phone_number VARCHAR(20);
+```
+
+Avoid changes that break the existing schema immediately.
+
+---
+
+### Small and Incremental Changes
+
+Large schema modifications increase risk and should be broken into smaller migrations.
+
+Example:
+
+Bad approach:
+
+```id="ewap1i"
+Modify multiple tables in a single migration
+```
+
+Better approach:
+
+```id="qj2dmi"
+Create separate migration scripts for each table change
+```
+
+This improves traceability and rollback safety.
+
+---
+
+## 5. Migration Naming Convention
+
+Migration files must follow a consistent naming format.
+
+Example format:
+
+```id="85pbbx"
+YYYYMMDD_description_of_change
+```
+
+Example:
+
+```id="04xvph"
+20230522_add_user_phone_number
+```
+
+This helps maintain chronological order of migrations.
+
+---
+
+## 6. Migration Review Requirements
+
+All migration scripts must be reviewed before merging.
+
+Reviewers should verify:
+
+* Schema correctness
+* Index usage
+* Performance implications
+* Backward compatibility
+* Rollback capability
+
+Example pull request description:
+
+```id="7py4ng"
+Migration: add phone_number column to users table
+
+Impact:
+Supports new user verification feature.
+Backward compatible with existing schema.
+```
+
+---
+
+## 7. Production Migration Process
+
+Database migrations must follow a controlled deployment process.
+
+### Step 1: Apply Migration in Staging
+
+All migrations must first be executed in the staging environment.
+
+Example command:
+
+```bash id="m6t3b8"
+python manage.py migrate --settings=staging
+```
+
+Engineers must verify:
+
+* Migration runs successfully
+* Application functions correctly
+* No data corruption occurs
+
+---
+
+### Step 2: Backup Database
+
+Before running production migrations, a full database backup must be created.
+
+Example command (PostgreSQL):
+
+```bash id="j9r6px"
+pg_dump production_db > backup.sql
+```
+
+This backup enables recovery if migration fails.
+
+---
+
+### Step 3: Execute Migration
+
+Run the migration during the approved deployment window.
+
+Example:
+
+```bash id="dy4l7i"
+python manage.py migrate --settings=production
+```
+
+Engineers must monitor database logs during execution.
+
+---
+
+## 8. Long-Running Migrations
+
+Migrations that affect large tables may cause performance issues.
+
+To minimize risk:
+
+* Run migrations during low traffic periods
+* Use batched updates
+* Avoid table locks where possible
+
+Example batch update pattern:
+
+```sql id="rf0a3m"
+UPDATE users
+SET status = 'active'
+WHERE status IS NULL
+LIMIT 1000;
+```
+
+Repeat the operation until all rows are updated.
+
+---
+
+## 9. Rollback Procedures
+
+Every migration must include a rollback strategy.
+
+Example rollback SQL:
+
+```sql id="3l3gma"
+ALTER TABLE users DROP COLUMN phone_number;
+```
+
+If a migration fails:
+
+1. Stop deployment
+2. Restore database backup
+3. Investigate migration issue
+
+Rollback capability must always be verified before production release.
+
+---
+
+## 10. Monitoring After Migration
+
+After applying migrations, engineers must monitor database health.
+
+Metrics to observe:
+
+* Query performance
+* Error rates
+* CPU usage
+* Disk utilization
+
+Example monitoring query:
+
+```sql id="0n1kgi"
+SELECT * FROM pg_stat_activity;
+```
+
+Any anomalies must be investigated immediately.
+
+---
+
+## 11. Prohibited Practices
+
+The following practices are strictly prohibited:
+
+* Direct manual edits to production databases
+* Running migrations without backups
+* Schema changes outside version control
+* Large destructive operations without review
+
+Violations may lead to production incidents and data loss.
+
+---
+
+## 12. Summary
+
+This database migration policy ensures:
+
+* Safe schema evolution
+* Controlled database changes
+* Reduced risk of data corruption
+* Reliable rollback procedures
+
+All engineering teams must follow this policy when performing schema or data migrations in any environment.
+
+---

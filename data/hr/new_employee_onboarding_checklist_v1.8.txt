@@ -1,0 +1,269 @@
+**new_employee_onboarding_checklist_v1.8.txt**
+
+---
+
+Title: New Employee Onboarding Checklist
+Type: Guide
+Department: HR
+Effective Date: June 14, 2023
+Version: v1.8
+-------------
+
+## 1. Purpose
+
+This guide outlines the standard onboarding process for new employees joining the company. The onboarding process ensures that employees receive the necessary resources, training, and support to begin their roles successfully.
+
+A structured onboarding process helps employees integrate into the company culture, understand their responsibilities, and become productive team members more quickly.
+
+This checklist should be used by **HR, hiring managers, and IT teams** when onboarding new hires.
+
+---
+
+## 2. Pre-Joining Preparation (Before Day 1)
+
+The following tasks should be completed **3–5 business days before the employee's start date**.
+
+### HR Responsibilities
+
+HR must complete the following:
+
+* Send offer letter and employment contract
+* Collect signed employment documents
+* Create employee record in the HR system
+* Add employee to payroll system
+* Share first-day instructions and schedule
+
+Example welcome email:
+
+```id="rd1m3k"
+Subject: Welcome to the Team!
+
+Hello [Employee Name],
+
+We are excited to have you join us on [Start Date]. 
+Your first-day orientation will begin at 10:00 AM.
+
+Best regards,  
+HR Team
+```
+
+---
+
+### IT Setup
+
+The IT team must prepare the employee's technical resources.
+
+Required setup tasks:
+
+* Create company email account
+* Create system login credentials
+* Provide VPN access
+* Configure access to internal tools
+* Prepare laptop and equipment
+
+Typical tools provided include:
+
+* Company laptop
+* Email account
+* Slack workspace access
+* Project management tools (e.g., Jira)
+* Git repository access
+
+---
+
+## 3. First Day Onboarding
+
+The first day focuses on introductions, orientation, and setup.
+
+### Orientation Session
+
+HR will conduct a **30–60 minute onboarding session** covering:
+
+* Company overview
+* Organizational structure
+* HR policies
+* Workplace guidelines
+* Benefits overview
+
+Employees should also receive access to the **employee handbook**.
+
+---
+
+### Equipment Setup
+
+Employees will receive their work equipment, including:
+
+* Laptop
+* Charger
+* Keyboard and mouse (if required)
+* Security credentials
+
+IT should assist employees with:
+
+* Logging into company systems
+* Connecting to VPN
+* Setting up email
+* Installing necessary software
+
+Example login process:
+
+```id="a3q8p7"
+1. Connect laptop to company Wi-Fi
+2. Login with company credentials
+3. Enable multi-factor authentication
+```
+
+---
+
+## 4. Team Introduction
+
+The hiring manager should introduce the new employee to their team.
+
+This introduction may include:
+
+* Team members and roles
+* Project overview
+* Team communication channels
+* Meeting schedules
+
+Typical communication tools include:
+
+* Slack
+* Email
+* Zoom or Google Meet
+
+Example Slack introduction message:
+
+```id="sj2k5m"
+Welcome [Employee Name] to the engineering team! 
+They will be joining us as a Backend Developer.
+```
+
+---
+
+## 5. First Week Tasks
+
+During the first week, employees should focus on learning the company environment and tools.
+
+Recommended activities:
+
+* Review internal documentation
+* Complete mandatory HR training
+* Set up development environment
+* Meet with team members
+* Understand project structure
+
+Managers should schedule a **one-on-one meeting** with the new employee within the first week.
+
+Suggested meeting duration:
+
+```id="lk7n9q"
+30 minutes
+```
+
+Topics may include:
+
+* Role expectations
+* Team goals
+* Initial tasks
+
+---
+
+## 6. First 30 Days
+
+During the first month, employees are expected to gradually begin contributing to projects.
+
+Key milestones may include:
+
+* Completing onboarding training
+* Understanding team workflows
+* Contributing to small tasks or tickets
+* Participating in team meetings
+
+Managers should provide guidance and feedback during this period.
+
+Example onboarding task:
+
+```id="vf0e6p"
+Resolve a small bug or documentation update in the project repository.
+```
+
+---
+
+## 7. Required Training
+
+New employees must complete mandatory training modules within the first **30 days**.
+
+Required training may include:
+
+* Information security training
+* Workplace conduct training
+* Data privacy training
+* Compliance training
+
+Training sessions are available through the company's learning platform.
+
+---
+
+## 8. Probation Period
+
+New employees typically undergo a **3-month probation period**.
+
+During this time:
+
+* Managers evaluate performance
+* Employees receive feedback
+* Training and support are provided
+
+At the end of the probation period, the manager conducts a probation review.
+
+Possible outcomes include:
+
+* Confirmation of employment
+* Extension of probation
+* Performance improvement plan (if necessary)
+
+---
+
+## 9. Employee Support Resources
+
+Employees may seek assistance from the following resources:
+
+| Resource       | Purpose                   |
+| -------------- | ------------------------- |
+| HR Team        | Benefits, policies, leave |
+| IT Support     | Technical issues          |
+| Hiring Manager | Role guidance             |
+| Team Lead      | Project-related questions |
+
+Employees are encouraged to ask questions and seek help whenever needed.
+
+---
+
+## 10. Onboarding Completion
+
+The onboarding process is considered complete once the employee has:
+
+* Received all required equipment
+* Completed mandatory training
+* Set up required systems
+* Begun assigned work tasks
+* Met with their manager and team
+
+Managers should confirm onboarding completion within the **first 30 days**.
+
+---
+
+## 11. Continuous Integration
+
+Successful onboarding helps employees quickly adapt to company workflows and culture.
+
+Managers should continue supporting employees beyond the onboarding period through:
+
+* Regular feedback
+* Mentorship
+* Professional development opportunities
+
+---
+
+Say **“Next”** to generate **Document 5: Expense Reimbursement Policy**.

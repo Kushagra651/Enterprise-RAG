@@ -1,0 +1,221 @@
+**work_from_home_equipment_and_setup_faq_v1.3.txt**
+
+---
+
+Title: Work From Home Equipment and Setup
+Type: FAQ
+Department: HR
+Effective Date: August 16, 2023
+Version: v1.3
+-------------
+
+## 1. Purpose
+
+This FAQ provides guidance for employees working remotely or in hybrid roles regarding home office equipment, workspace setup, and company-provided resources. The goal is to help employees create a productive, comfortable, and secure work environment while working from home.
+
+These guidelines apply to employees who regularly perform their duties outside the company office.
+
+---
+
+## 2. What Equipment Does the Company Provide?
+
+The company provides essential equipment required to perform work duties effectively.
+
+Standard equipment includes:
+
+* Company-issued laptop
+* Laptop charger
+* Secure VPN access
+* Collaboration software tools
+* Security authentication tools
+
+Depending on the role, employees may also receive:
+
+* External monitor
+* Keyboard and mouse
+* Headset for meetings
+
+All company-issued equipment remains company property and must be returned when employment ends.
+
+---
+
+## 3. Is There a Work From Home Setup Allowance?
+
+Yes. Employees may receive a **one-time remote workspace setup allowance of $500**.
+
+This allowance can be used to purchase items that improve productivity and ergonomics.
+
+Examples of eligible purchases include:
+
+* Ergonomic office chair
+* Adjustable desk
+* External monitor
+* Desk lighting
+* Laptop stand
+* Keyboard and mouse
+
+Employees must submit receipts to claim reimbursement.
+
+---
+
+## 4. Can I Purchase My Own Equipment?
+
+Employees may purchase additional equipment if it supports their work setup. However, purchases exceeding the standard allowance must receive manager approval.
+
+Examples requiring approval:
+
+```id="u8g3jd"
+High-end monitor  
+Standing desk  
+Specialized equipment
+```
+
+Employees should confirm approval before making purchases to ensure reimbursement eligibility.
+
+---
+
+## 5. What Internet Requirements Are Recommended?
+
+Employees working remotely must maintain a stable internet connection.
+
+Recommended internet speed:
+
+```id="x1b6m2"
+Minimum 50 Mbps download
+Minimum 10 Mbps upload
+```
+
+Reliable internet connectivity ensures smooth video conferencing, file transfers, and remote system access.
+
+Employees are responsible for maintaining their home internet service.
+
+---
+
+## 6. How Should I Set Up My Workspace?
+
+Employees should create a workspace that promotes productivity and minimizes distractions.
+
+Recommended workspace setup:
+
+* Quiet environment for calls and meetings
+* Comfortable chair with proper back support
+* Desk at appropriate height
+* Adequate lighting
+* Secure place for company devices
+
+Example ergonomic setup:
+
+```id="o9p3zt"
+Monitor at eye level  
+Keyboard at elbow height  
+Feet flat on the floor
+```
+
+This helps reduce strain and improve long-term comfort.
+
+---
+
+## 7. What Security Practices Must Be Followed?
+
+Remote employees must follow company security policies to protect company data.
+
+Security requirements include:
+
+* Use company-issued devices for work
+* Connect to company systems using VPN
+* Enable multi-factor authentication
+* Lock devices when not in use
+* Avoid using public Wi-Fi without VPN
+
+Sensitive company information should not be stored on personal devices.
+
+---
+
+## 8. What Should I Do If My Equipment Stops Working?
+
+If company equipment experiences technical issues, employees should contact the IT support team immediately.
+
+Steps to follow:
+
+1. Submit a support request through the IT helpdesk
+2. Provide a description of the issue
+3. Include screenshots if possible
+
+Example issue report:
+
+```id="y6l1av"
+Laptop unable to connect to VPN after system update.
+```
+
+IT may provide remote troubleshooting or arrange a replacement device if necessary.
+
+---
+
+## 9. Who Is Responsible for Equipment Maintenance?
+
+Employees are responsible for taking reasonable care of company-issued equipment.
+
+Employees should:
+
+* Avoid physical damage
+* Keep devices clean
+* Install required security updates
+* Use protective cases when transporting devices
+
+Lost or damaged equipment should be reported immediately.
+
+---
+
+## 10. Can I Work From Locations Other Than My Home?
+
+Employees may occasionally work from alternative locations such as coworking spaces or temporary residences.
+
+However, employees must ensure:
+
+* Reliable internet connectivity
+* Secure working environment
+* Compliance with company security policies
+
+Employees should inform their manager if they plan to work from a different location for an extended period.
+
+---
+
+## 11. Are Office Resources Still Available?
+
+Yes. Employees working remotely may still use office facilities when needed.
+
+Office resources include:
+
+* Meeting rooms
+* Quiet workspaces
+* Collaboration areas
+* IT support assistance
+
+Employees may reserve workspace using the company office booking system.
+
+---
+
+## 12. Who Can I Contact for Support?
+
+Employees may contact the following teams for assistance:
+
+| Team       | Support Provided           |
+| ---------- | -------------------------- |
+| IT Support | Technical issues           |
+| HR         | Remote work policies       |
+| Facilities | Office equipment questions |
+| Manager    | Work arrangement approval  |
+
+Employees should reach out promptly if they encounter challenges with their work-from-home setup.
+
+---
+
+## 13. Policy Updates
+
+The company may update remote work and equipment guidelines as technology, workplace needs, and company policies evolve.
+
+Employees will be notified of any updates through official HR communication channels.
+
+---
+
+Say **“Next”** to generate **Document 7: Professional Development and Learning Budget Policy**.

@@ -1,0 +1,363 @@
+**incident_response_and_oncall_procedures_v2.0.txt**
+
+---
+
+Title: Incident Response and On-Call Procedures
+Type: SOP
+Department: Engineering
+Date: February 3, 2024
+Version: v2.0
+-------------
+
+## 1. Purpose
+
+This document defines the standard procedures for responding to production incidents and managing the on-call rotation for engineering teams. The goal is to minimize service downtime, resolve incidents quickly, and ensure clear communication during system disruptions.
+
+All production services must have an assigned **on-call engineer** responsible for monitoring alerts and responding to incidents.
+
+---
+
+## 2. Definition of an Incident
+
+An incident is defined as any event that negatively impacts system availability, performance, or data integrity.
+
+Examples include:
+
+* API downtime
+* Database failure
+* Elevated error rates
+* Infrastructure outages
+* Security breaches
+* Data corruption
+
+Incidents are categorized by **severity level**.
+
+---
+
+## 3. Incident Severity Levels
+
+### SEV-1 (Critical)
+
+A critical incident causing major service disruption affecting a large number of users.
+
+Examples:
+
+* Entire production system unavailable
+* Payment processing failure
+* Data loss
+
+Response requirements:
+
+```id="uh9l3p"
+Immediate response within 5 minutes
+```
+
+Engineering leadership must be notified immediately.
+
+---
+
+### SEV-2 (High)
+
+Major feature degradation affecting a subset of users.
+
+Examples:
+
+* API latency significantly increased
+* Partial service outage
+* Failed background jobs
+
+Response time:
+
+```id="s8qlmy"
+15 minutes
+```
+
+---
+
+### SEV-3 (Medium)
+
+Non-critical issues with minimal user impact.
+
+Examples:
+
+* Minor UI bugs
+* Non-critical feature malfunction
+* Intermittent failures
+
+Response time:
+
+```id="o8d82m"
+1 hour
+```
+
+---
+
+### SEV-4 (Low)
+
+Minor issues or maintenance-related alerts.
+
+Examples:
+
+* Log warnings
+* Low-priority monitoring alerts
+
+Response time:
+
+```id="2yj2sc"
+Next business day
+```
+
+---
+
+## 4. On-Call Rotation
+
+Each engineering team must maintain a weekly **on-call rotation**.
+
+Responsibilities of the on-call engineer:
+
+* Monitor alerts
+* Investigate incidents
+* Coordinate fixes
+* Escalate issues when necessary
+
+Typical rotation schedule:
+
+```id="y3uk31"
+Monday 09:00 → Monday 09:00 (1 week)
+```
+
+The on-call schedule is maintained using tools such as:
+
+* PagerDuty
+* Opsgenie
+* Slack alerts
+
+---
+
+## 5. Incident Detection
+
+Incidents are usually detected through monitoring alerts.
+
+Monitoring tools include:
+
+* Prometheus
+* Grafana
+* Datadog
+* Cloud monitoring services
+
+Example alert:
+
+```id="2ns43c"
+High error rate detected:
+service=payment-api
+error_rate=6.2%
+threshold=3%
+```
+
+When an alert triggers, the on-call engineer receives a notification via pager or messaging platform.
+
+---
+
+## 6. Initial Incident Response
+
+When an incident alert is received, the on-call engineer must perform the following steps.
+
+### Step 1: Acknowledge Alert
+
+Acknowledge the alert in the monitoring system.
+
+Example PagerDuty command:
+
+```id="ehy2qp"
+acknowledge incident
+```
+
+---
+
+### Step 2: Verify the Issue
+
+Check logs, dashboards, and metrics to confirm the issue.
+
+Example log command:
+
+```bash id="6egbn4"
+kubectl logs deployment/payment-api
+```
+
+Example monitoring check:
+
+* Error rate
+* Request latency
+* CPU utilization
+* Memory usage
+
+---
+
+### Step 3: Determine Severity
+
+Classify the incident using the severity levels defined earlier.
+
+Example:
+
+```id="t0mbdw"
+API unavailable → SEV-1
+```
+
+---
+
+## 7. Incident Communication
+
+For **SEV-1 and SEV-2 incidents**, a dedicated incident communication channel must be created.
+
+Example Slack channel:
+
+```id="8u1r4o"
+#incident-payment-api
+```
+
+The incident lead must provide updates every:
+
+```id="5v7d7h"
+15 minutes
+```
+
+Example status update:
+
+```id="yy0rlm"
+Incident Update:
+Payment API experiencing high latency.
+Engineers investigating database performance.
+Next update in 15 minutes.
+```
+
+---
+
+## 8. Incident Mitigation
+
+The on-call engineer should attempt immediate mitigation actions.
+
+Common mitigation steps include:
+
+* Restart failing services
+* Rollback recent deployments
+* Scale infrastructure
+* Disable problematic features
+
+Example Kubernetes restart:
+
+```bash id="b7z1qj"
+kubectl rollout restart deployment/payment-api
+```
+
+Example rollback:
+
+```bash id="7l2t7r"
+kubectl rollout undo deployment/payment-api
+```
+
+---
+
+## 9. Escalation Procedure
+
+If the incident cannot be resolved quickly, escalation is required.
+
+Escalation path:
+
+1. On-call engineer
+2. Senior engineer
+3. Engineering manager
+4. Infrastructure team
+
+Escalation should occur if:
+
+```id="kh5i0b"
+SEV-1 unresolved after 30 minutes
+```
+
+---
+
+## 10. Incident Resolution
+
+Once the issue is resolved, the on-call engineer must verify system stability.
+
+Verification steps:
+
+* Confirm service health endpoints
+* Check monitoring dashboards
+* Verify user functionality
+
+Example health check:
+
+```bash id="in44r6"
+curl https://api.company.com/health
+```
+
+Expected response:
+
+```json id="8tmyv7"
+{
+  "status": "ok"
+}
+```
+
+---
+
+## 11. Post-Incident Review
+
+Every SEV-1 and SEV-2 incident must include a **postmortem report**.
+
+The report must include:
+
+* Timeline of events
+* Root cause analysis
+* Impact assessment
+* Preventative actions
+
+Example timeline format:
+
+```id="4zsyps"
+14:03 - Alert triggered
+14:05 - Incident acknowledged
+14:12 - Root cause identified
+14:18 - Fix deployed
+14:25 - Service restored
+```
+
+Postmortems must be completed within:
+
+```id="efy2jl"
+48 hours
+```
+
+---
+
+## 12. Incident Documentation
+
+All incidents must be documented in the incident tracking system.
+
+Required information:
+
+* Incident ID
+* Severity level
+* Root cause
+* Resolution steps
+* Responsible team
+
+This documentation helps improve reliability and prevent future incidents.
+
+---
+
+## 13. Summary
+
+The incident response process ensures:
+
+* Rapid response to outages
+* Clear communication during incidents
+* Structured escalation procedures
+* Continuous system reliability improvements
+
+All engineering teams must follow these procedures to maintain high availability of production systems.
+
+---
+
+Say **“Next”** to generate **Document 7: Docker and Containerization Guidelines (Guide)**.

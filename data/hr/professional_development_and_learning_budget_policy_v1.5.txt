@@ -1,0 +1,225 @@
+**professional_development_and_learning_budget_policy_v1.5.txt**
+
+---
+
+Title: Professional Development and Learning Budget
+Type: Policy
+Department: HR
+Effective Date: December 4, 2023
+Version: v1.5
+-------------
+
+## 1. Purpose
+
+The company encourages continuous learning and professional development for all employees. This policy outlines the professional development benefits available to employees, including learning budgets, training opportunities, and reimbursement procedures.
+
+The goal of this program is to support employees in expanding their skills, improving job performance, and advancing their careers while contributing to the company's growth.
+
+---
+
+## 2. Annual Learning Budget
+
+Each full-time employee is eligible for an **annual professional development budget of $1,000**.
+
+This budget may be used for learning activities such as:
+
+* Online courses
+* Professional certifications
+* Technical workshops
+* Industry conferences
+* Educational books
+* Skill development programs
+
+Example eligible expense:
+
+```id="b6y9l1"
+Machine Learning certification course – $450
+```
+
+Unused learning budget **does not carry over** to the next calendar year.
+
+---
+
+## 3. Eligibility Requirements
+
+Employees become eligible for the learning budget after completing:
+
+```id="n4u7pr"
+3 months of employment
+```
+
+Employees must also be in good standing with their performance reviews.
+
+Contractors and temporary employees may not be eligible unless approved by their manager and HR.
+
+---
+
+## 4. Eligible Learning Activities
+
+Employees may use their learning budget for activities that support professional growth and job-related skills.
+
+Examples of eligible learning resources include:
+
+* Technical courses (software development, data science, design)
+* Leadership training programs
+* Project management certifications
+* Industry conferences or seminars
+* Professional memberships
+* Educational books or subscriptions
+
+Example course purchase:
+
+```id="t1e5m7"
+Advanced React Development Course – $120
+```
+
+Managers are encouraged to discuss learning plans with employees during performance reviews.
+
+---
+
+## 5. Ineligible Expenses
+
+The following expenses are not covered by the learning budget:
+
+* Personal hobbies unrelated to work
+* Academic degree programs (unless approved separately)
+* Travel costs unrelated to training
+* Hardware purchases such as laptops or tablets
+
+Example non-eligible expense:
+
+```id="h2x9vf"
+Gaming course unrelated to job responsibilities
+```
+
+Employees should confirm eligibility before purchasing training resources.
+
+---
+
+## 6. Conference and Workshop Attendance
+
+Employees may use their learning budget to attend professional conferences or workshops.
+
+Typical expenses may include:
+
+* Registration fees
+* Online conference passes
+* Workshop participation
+
+For in-person conferences, travel costs may be reimbursed separately under the **Expense Reimbursement Policy**, subject to manager approval.
+
+Example:
+
+```id="g8p0jw"
+Software Engineering Conference Registration – $350
+```
+
+Employees should discuss conference participation with their manager beforehand.
+
+---
+
+## 7. Approval Process
+
+Employees must obtain manager approval before using their learning budget.
+
+Approval steps:
+
+1. Submit training request
+2. Provide course details
+3. Explain how the training supports job responsibilities
+4. Receive manager approval
+
+Example request message:
+
+```id="s9q4yn"
+Request approval for a Python Data Engineering course to improve data pipeline development skills.
+```
+
+Managers should review and approve requests within **3 business days**.
+
+---
+
+## 8. Reimbursement Process
+
+After completing the learning activity, employees must submit a reimbursement request.
+
+Required documentation includes:
+
+* Proof of payment
+* Invoice or receipt
+* Description of course or training
+* Completion certificate (if applicable)
+
+Example reimbursement entry:
+
+```id="w5j8bz"
+Course: Cloud Architecture Fundamentals  
+Cost: $220
+```
+
+Reimbursements are typically processed within:
+
+```id="y3n0da"
+10 business days
+```
+
+---
+
+## 9. Knowledge Sharing
+
+Employees are encouraged to share knowledge gained from training activities.
+
+Examples include:
+
+* Presenting learnings in team meetings
+* Writing internal documentation
+* Conducting short knowledge-sharing sessions
+
+Example:
+
+```id="c7r3lo"
+Present summary of DevOps conference insights during team meeting.
+```
+
+This helps spread knowledge across teams and maximize the value of training investments.
+
+---
+
+## 10. Learning Goals
+
+Employees are encouraged to set **1–2 professional development goals per year**.
+
+Examples may include:
+
+* Learning a new programming language
+* Obtaining a professional certification
+* Improving leadership skills
+* Developing expertise in a specialized area
+
+Managers may include these goals in performance development plans.
+
+---
+
+## 11. Policy Compliance
+
+Employees must ensure that learning budget funds are used appropriately.
+
+Misuse of the learning budget may result in:
+
+* Reimbursement denial
+* Policy review with HR
+* Disciplinary action
+
+Employees should retain receipts and documentation for all learning-related purchases.
+
+---
+
+## 12. Policy Updates
+
+This policy may be reviewed periodically by HR to align with company growth and employee learning needs.
+
+Any updates will be communicated through official HR announcements.
+
+---
+
+Say **“Next”** to generate the **final document: Team Communication and Meeting Guidelines (SOP)**.

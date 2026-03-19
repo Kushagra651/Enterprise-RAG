@@ -1,0 +1,237 @@
+**expense_reimbursement_policy_v2.0.txt**
+
+---
+
+Title: Expense Reimbursement Policy
+Type: Policy
+Department: HR
+Effective Date: February 20, 2023
+Version: v2.0
+-------------
+
+## 1. Purpose
+
+This policy defines the guidelines for reimbursing employees for approved business-related expenses incurred while performing company duties. The goal is to ensure that employees are fairly reimbursed while maintaining financial accountability and transparency.
+
+All employees must follow this policy when submitting expense reimbursement requests.
+
+---
+
+## 2. Eligible Business Expenses
+
+Employees may be reimbursed for expenses that are **reasonable, necessary, and directly related to business activities**.
+
+Common reimbursable expenses include:
+
+* Business travel (flights, trains, taxis)
+* Hotel accommodation for work travel
+* Meals during business travel
+* Client meetings
+* Conference registration fees
+* Work-related office supplies
+* Remote work setup expenses (if approved)
+
+Example:
+
+```id="7n4a5p"
+Taxi ride to client meeting – reimbursable
+```
+
+Expenses unrelated to business activities will not be reimbursed.
+
+---
+
+## 3. Non-Reimbursable Expenses
+
+The following expenses are generally **not eligible for reimbursement**:
+
+* Personal travel costs
+* Personal meals not related to work
+* Alcohol (unless approved for client events)
+* Traffic fines or parking violations
+* Personal entertainment
+* Unapproved equipment purchases
+
+Example:
+
+```id="uxc2f8"
+Movie tickets during travel – not reimbursable
+```
+
+Employees should consult their manager if they are unsure whether an expense qualifies.
+
+---
+
+## 4. Travel Expense Guidelines
+
+Employees traveling for work must follow company travel guidelines.
+
+### Air Travel
+
+Standard policy:
+
+```id="c0u1jp"
+Economy class for flights under 6 hours
+```
+
+Business class travel may be approved for:
+
+* Flights longer than **8 hours**
+* Senior leadership travel
+
+Flights should be booked at least **7 days in advance** whenever possible to minimize costs.
+
+---
+
+### Accommodation
+
+Employees may book hotels with a nightly cost up to:
+
+```id="m5f9ek"
+$200 per night
+```
+
+Exceptions require manager approval.
+
+Employees should choose reasonably priced accommodations close to the work location.
+
+---
+
+### Meal Expenses
+
+Employees may claim meal expenses during business travel.
+
+Daily meal reimbursement limit:
+
+```id="l0v8sq"
+$50 per day
+```
+
+This limit includes breakfast, lunch, and dinner.
+
+Itemized receipts are required for all meal claims.
+
+---
+
+## 5. Remote Work Expenses
+
+Employees working remotely may request reimbursement for approved home office equipment.
+
+Annual home office reimbursement limit:
+
+```id="p4b6zr"
+$300 per year
+```
+
+Eligible items include:
+
+* Ergonomic office chairs
+* External monitors
+* Desk accessories
+* Webcams or headsets
+
+Employees must receive manager approval before purchasing equipment.
+
+---
+
+## 6. Expense Submission Process
+
+Employees must submit reimbursement requests through the company's expense management system.
+
+Required steps:
+
+1. Upload itemized receipts
+2. Provide expense description
+3. Select expense category
+4. Submit for manager approval
+
+Example expense description:
+
+```id="v2n7xa"
+Lunch meeting with client regarding project planning.
+```
+
+Receipts must clearly show:
+
+* Vendor name
+* Purchase date
+* Amount paid
+* Description of items
+
+---
+
+## 7. Submission Deadline
+
+Expense reports must be submitted within:
+
+```id="0q7jwr"
+30 days of the expense date
+```
+
+Late submissions may be rejected unless an exception is approved by HR or Finance.
+
+---
+
+## 8. Approval Process
+
+Expense claims must be reviewed and approved by the employee's direct manager.
+
+For large expenses above:
+
+```id="9u3tgc"
+$500
+```
+
+Additional approval from the Finance department may be required.
+
+Managers should review expense reports within **5 business days**.
+
+---
+
+## 9. Reimbursement Timeline
+
+Once approved, reimbursements will be processed through payroll or direct bank transfer.
+
+Typical reimbursement timeline:
+
+```id="1m9bkp"
+7–10 business days
+```
+
+Employees will receive a notification once reimbursement has been processed.
+
+---
+
+## 10. Company Credit Cards
+
+Certain employees may be issued company credit cards for business expenses.
+
+Company card usage must follow these rules:
+
+* Only business-related purchases allowed
+* Receipts must still be submitted
+* Personal charges must be repaid immediately
+
+Misuse of company cards may result in disciplinary action.
+
+---
+
+## 11. Compliance and Auditing
+
+The Finance team may periodically review expense claims to ensure compliance with company policies.
+
+Employees may be asked to provide additional documentation during audits.
+
+Intentional misuse of the reimbursement policy may result in disciplinary action.
+
+---
+
+## 12. Policy Updates
+
+This policy may be updated periodically based on financial policies and business requirements.
+
+Employees will be notified of policy changes through official HR communications.
+
+---
+
+Say **“Next”** to generate **Document 6: Work From Home Equipment and Setup (FAQ)**.
