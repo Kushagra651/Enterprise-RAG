@@ -2,6 +2,7 @@ from typing import List, Dict, Any, Optional
 from embeddings import EmbeddingGenerator
 from qdrant_manager import QdrantManager
 from document_processor import DocumentProcessor
+from query_decomposition import QueryDecomposer
 import ollama
 
 
@@ -9,6 +10,7 @@ class RAGRetrieval:
     def __init__(self):
         self.embedder = EmbeddingGenerator()
         self.qdrant = QdrantManager()
+        self.decomposer = QueryDecomposer()  # NEW: Added decomposer
         self.llm_model = "mistral:7b"
         self._verify_llm()
     
@@ -110,6 +112,71 @@ class RAGRetrieval:
             "filters_applied": filters
         }
     
+    def query_with_decomposition(
+        self,
+        question: str,
+        top_k: int = 5
+    ) -> Dict[str, Any]:
+        """
+        NEW: Query with automatic decomposition for complex questions
+        """
+        
+        print(f"\n🔍 Analyzing query: {question}")
+        
+        # Step 1: Decompose query
+        decomposition = self.decomposer.decompose_query(question)
+        
+        # Step 2: Execute sub-queries
+        sub_results = []
+        
+        for idx, sub_q in enumerate(decomposition['sub_queries'], 1):
+            print(f"\n📌 Sub-query {idx}/{len(decomposition['sub_queries'])}: {sub_q['sub_query']}")
+            
+            # Build filters from decomposition
+            filters = {}
+            if sub_q['department']:
+                filters['department'] = sub_q['department']
+            if sub_q['doc_type']:
+                filters['doc_type'] = sub_q['doc_type']
+            
+            # Execute query
+            result = self.query(
+                question=sub_q['sub_query'],
+                **filters,
+                top_k=top_k
+            )
+            
+            sub_results.append({
+                'sub_query': sub_q['sub_query'],
+                'department': sub_q['department'],
+                'doc_type': sub_q['doc_type'],
+                'answer': result['answer'],
+                'sources': result['sources']
+            })
+        
+        # Step 3: Synthesize if multiple sub-queries
+        if decomposition['needs_decomposition'] and len(sub_results) > 1:
+            print(f"\n🔄 Synthesizing {len(sub_results)} answers...")
+            final_answer = self.decomposer.synthesize_answers(question, sub_results)
+        else:
+            final_answer = sub_results[0]['answer']
+        
+        # Collect all unique sources
+        all_sources = []
+        seen_files = set()
+        for result in sub_results:
+            for source in result['sources']:
+                if source['source_file'] not in seen_files:
+                    all_sources.append(source)
+                    seen_files.add(source['source_file'])
+        
+        return {
+            "answer": final_answer,
+            "sources": all_sources,
+            "decomposition": decomposition,
+            "sub_results": sub_results
+        }
+    
     def _generate_answer(self, question: str, context_chunks: List[Dict[str, Any]]) -> str:
         """Generate answer using Mistral with retrieved context"""
         
@@ -182,14 +249,14 @@ if __name__ == "__main__":
     rag.ingest_documents("data")
     
     print("\n" + "="*60)
-    print("TESTING QUERIES")
+    print("TESTING STANDARD QUERIES")
     print("="*60)
     
     # Test query without filters
     print("\n1️⃣ Query without filters:")
     result = rag.query("What is the remote work policy?")
-    print(f"\nAnswer: {result['answer']}")
-    print(f"\nSources: {len(result['sources'])} documents")
+    print(f"\nAnswer: {result['answer'][:200]}...")
+    print(f"Sources: {len(result['sources'])} documents")
     
     # Test query with department filter
     print("\n" + "="*60)
@@ -198,20 +265,23 @@ if __name__ == "__main__":
         "What is the remote work policy?",
         department="Hr"
     )
-    print(f"\nAnswer: {result['answer']}")
-    print(f"\nSources: {len(result['sources'])} documents")
-    for source in result['sources'][:2]:
-        print(f"  - {source['source_file']} (Score: {source['score']:.3f})")
+    print(f"\nAnswer: {result['answer'][:200]}...")
+    print(f"Sources: {len(result['sources'])} documents")
     
-    # Test query with multiple filters
     print("\n" + "="*60)
-    print("3️⃣ Query with multiple filters (Engineering + SOP):")
-    result = rag.query(
-        "What are the deployment procedures?",
-        department="Engineering",
-        doc_type="SOP"
+    print("TESTING QUERY DECOMPOSITION")
+    print("="*60)
+    
+    # Test complex query with decomposition
+    result = rag.query_with_decomposition(
+        "What is the deployment process for remote engineering employees?"
     )
-    print(f"\nAnswer: {result['answer']}")
-    print(f"\nSources: {len(result['sources'])} documents")
-    for source in result['sources'][:2]:
-        print(f"  - {source['source_file']} (Score: {source['score']:.3f})")
+    
+    print(f"\n✅ Final Answer:\n{result['answer'][:300]}...")
+    print(f"\n📚 Total Sources: {len(result['sources'])}")
+    print(f"\n🔍 Decomposition:")
+    print(f"  Needs decomposition: {result['decomposition']['needs_decomposition']}")
+    print(f"  Sub-queries: {len(result['sub_results'])}")
+    for idx, sub in enumerate(result['sub_results'], 1):
+        print(f"\n  {idx}. {sub['sub_query']}")
+        print(f"     Dept: {sub['department']}, Type: {sub['doc_type']}")
